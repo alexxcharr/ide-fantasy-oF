@@ -6,7 +6,7 @@
 class boid{
 
 public:
-    void setup();
+    void setup(float width, float height);
     ofVec2f align(std::vector<boid> flock);
     ofVec2f cohesion(std::vector<boid> flock);
     ofVec2f separation(std::vector<boid> flock);

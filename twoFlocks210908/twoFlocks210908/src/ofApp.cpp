@@ -10,29 +10,30 @@ void ofApp::setup(){
     // gui.add(cohesionSlider.setup("cohesionSlider", 1, -5, 5));
     // gui.add(separationSlider.setup("separationSlider", 1, -5, 5));
     gui.add(radiusSlider.setup("radiusSlider", 50, 10, 1000));
-    for (int i =0; i < 500; i++) {
+    for (int i =0; i < 250; i++) {
         boid newB;
-        newB.setup();
+        newB.setup(200, 200);
         flock.push_back(newB);
         // cout<<newB.velocity<<endl;
     }
-    for (int i = 0; i < 500; i++) {
+    for (int i = 0; i < 250; i++) {
         boid newC;
-        newC.setup();
+        newC.setup(200, 200);
         flock1.push_back(newC);
     }
-    for (int i = 0; i < 500; i++) {
+    for (int i = 0; i < 250; i++) {
         boid newD;
-        newD.setup();
+        newD.setup(ofGetWidth()/4, ofGetHeight()/2);
         flock2.push_back(newD);
     }
-    for (int i = 0; i < 500; i++) {
+    for (int i = 0; i < 250; i++) {
         boid newE;
-        newE.setup();
+        newE.setup(ofGetWidth()/6, ofGetHeight()/2);
         flock3.push_back(newE);
     }
-    color.set(239);
-    color1.set(250, 0, 5);
+    color.set(255, 255, 0);
+    //color1.set(250, 0, 5);
+    color1.set(255, 255, 255);
 }
 
 //--------------------------------------------------------------
@@ -59,21 +60,23 @@ void ofApp::update(){
             }
 
         } if (message.getAddress() == "/corfu") {
+            printf("/corfu\n");
             if (message.getArgAsFloat(0) == 1) {
                 datax2 = message.getArgAsFloat(1);
                 datay2 = message.getArgAsFloat(2);
                 dataz2 = message.getArgAsFloat(3);
-                alignData2 = ofMap(datax, 0.46, 0.56, 0, 2);
-                cohesionData2 = ofMap(datay, 0.45, 0.55, 0, 2);
-                separationData2 = ofMap(dataz, 0.45, 0.55, 1, 2);
-                // cout<<datay<<endl;
+                alignData2 = ofMap(datax2, 0.46, 0.51, 0, 1.5); //3
+                cohesionData2 = ofMap(datay2, 0.45, 0.51, 0, 2);
+                separationData2 = ofMap(dataz2, 0.45, 0.51, 2, 10); //3
+                cout<< "-" << datax2 << " " << datay2 << " " << dataz2 << endl;
             }else if (message.getArgAsFloat(0) == 2) {
                 datax3 = message.getArgAsFloat(1);
                 datay3 = message.getArgAsFloat(2);
                 dataz3 = message.getArgAsFloat(3);
-                alignData3 = ofMap(datax, 0.46, 0.56, 0, 1.5);
-                cohesionData3 = ofMap(datay, 0.45, 0.55, 0, 1.5);
-                separationData3 = ofMap(dataz, 0.45, 0.55, 1, 1.5);
+                alignData3 = ofMap(datax3, 0.46, 0.56, 0, 1.5);
+                cohesionData3 = ofMap(datay3, 0.45, 0.55, 0, 1.5);
+                separationData3 = ofMap(dataz3, 0.45, 0.55, 2,  10);
+                //cout<< datax3 << " " << datay2 << " " << dataz2 << endl;
             }
 
         }
@@ -107,23 +110,23 @@ void ofApp::update(){
 void ofApp::draw(){
     // cam.begin();
     // ofTranslate(ofGetWidth()/2, ofGetHeight()/2, 0);
-    for (int i = 0; i < flock.size(); i++) {
-        flock[i].update();
-        flock[i].draw(color, flock);
-        flock[i].flock(flock, flock1);
-        flock[i].edges();
-        // flock[i].repulsion(flock, flock1);
-
-    }
-    for (int i = 0; i < flock1.size(); i++) {
-        flock1[i].update();
-        flock1[i].draw(color, flock);
-        flock1[i].flock(flock, flock1);
-        flock1[i].edges();
-    }
+//    for (int i = 0; i < flock.size(); i++) {
+//        flock[i].update();
+//        flock[i].draw(color, flock);
+//        flock[i].flock(flock, flock1);
+//        flock[i].edges();
+//        // flock[i].repulsion(flock, flock1);
+//
+//    }
+//    for (int i = 0; i < flock1.size(); i++) {
+//        flock1[i].update();
+//        flock1[i].draw(color, flock);
+//        flock1[i].flock(flock, flock1);
+//        flock1[i].edges();
+//    }
     for (int i = 0; i < flock1.size(); i++) {
         flock2[i].update();
-        flock2[i].draw(color1, flock1);
+        flock2[i].draw(color, flock1);
         flock2[i].flock(flock1, flock);
         flock2[i].edges();
     }

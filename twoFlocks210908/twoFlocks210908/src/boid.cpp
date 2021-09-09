@@ -2,12 +2,13 @@
 #include "boid.h"
 
 
-void boid::setup() {
-    position.set(ofRandomWidth()/2, ofRandomHeight());
+void boid::setup(float width, float height) {
+    position.set(ofRandomWidth(), ofRandomHeight()); // Den kanei tipota!!!
+    //position.set(width, height);
     acceleration.set(0,0);
     float angle = ofRandom(TWO_PI);
     velocity.set(cos(angle), sin(angle));
-    maxForce = 0.03;
+    maxForce = 0.03*2;
     maxSpeed = 4;
     alignRadius = 1000;
 }
@@ -119,7 +120,7 @@ void boid::draw(ofColor color, std::vector<boid> flock) {
     for (int i = 0; i < flock.size(); i++) {
 
         float d = position.distance(flock[i].position);
-        if (d>5 && d < 10) {
+        if (d > 2 && d < 10) {
             ofDrawLine(position, flock[i].position);
         }
     }
