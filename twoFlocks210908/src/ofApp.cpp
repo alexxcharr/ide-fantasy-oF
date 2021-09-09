@@ -4,7 +4,7 @@
 void ofApp::setup(){
     ofSetVerticalSync(true);
     osc.setup(PORT);
-    ofBackground(237);
+    ofBackground(39);
     gui.setup();
     //gui.add(alignSlider.setup("alignSlider", 1, -5, 5));
     // gui.add(cohesionSlider.setup("cohesionSlider", 1, -5, 5));
@@ -31,7 +31,7 @@ void ofApp::setup(){
         newE.setup();
         flock3.push_back(newE);
     }
-    color.set(39);
+    color.set(239);
     color1.set(250, 0, 5);
 }
 
