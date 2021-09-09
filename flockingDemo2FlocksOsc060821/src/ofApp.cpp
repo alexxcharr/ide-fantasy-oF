@@ -42,7 +42,7 @@ void ofApp::update(){
     while (osc.hasWaitingMessages()) {
         ofxOscMessage message;
         osc.getNextMessage(message);
-        if (message.getAddress() == "/minibee/data") {
+        if (message.getAddress() == "/corfu") {
             if (message.getArgAsFloat(0) == 1) {
                 datax = message.getArgAsFloat(1);
                 datay = message.getArgAsFloat(2);
@@ -55,9 +55,9 @@ void ofApp::update(){
                 datax1 = message.getArgAsFloat(1);
                 datay1 = message.getArgAsFloat(2);
                 dataz1 = message.getArgAsFloat(3);
-                alignData1 = ofMap(datax, 0.46, 0.51, 0, 1.5);
-                cohesionData1 = ofMap(datay, 0.45, 0.51, 0, 1.5);
-                separationData1 = ofMap(dataz, 0.45, 0.51, 2, 10);
+                alignData1 = ofMap(datax1, 0.46, 0.51, 0, 1.5);
+                cohesionData1 = ofMap(datay1, 0.45, 0.51, 0, 1.5);
+                separationData1 = ofMap(dataz1, 0.45, 0.51, 2, 10);
             }
 
         } if (message.getAddress() == "/sapporo") {
@@ -65,17 +65,17 @@ void ofApp::update(){
                 datax2 = message.getArgAsFloat(1);
                 datay2 = message.getArgAsFloat(2);
                 dataz2 = message.getArgAsFloat(3);
-                alignData2 = ofMap(datax, 0.46, 0.51, 0, 1.5);
-                cohesionData2 = ofMap(datay, 0.45, 0.51, 0, 1.5);
-                separationData2 = ofMap(dataz, 0.45, 0.51, 2, 10);
+                alignData2 = ofMap(datax2, 0.46, 0.51, 0, 1.5);
+                cohesionData2 = ofMap(datay2, 0.45, 0.51, 0, 1.5);
+                separationData2 = ofMap(dataz2, 0.45, 0.51, 2, 10);
                 // cout<<datay<<endl;
             }else if (message.getArgAsFloat(0) == 2) {
                 datax3 = message.getArgAsFloat(1);
                 datay3 = message.getArgAsFloat(2);
                 dataz3 = message.getArgAsFloat(3);
-                alignData3 = ofMap(datax, 0.46, 0.51, 0, 1.5);
-                cohesionData3 = ofMap(datay, 0.45, 0.51, 0, 1.5);
-                separationData3 = ofMap(dataz, 0.45, 0.51, 2,  10);
+                alignData3 = ofMap(datax3, 0.46, 0.51, 0, 1.5);
+                cohesionData3 = ofMap(datay3, 0.45, 0.51, 0, 1.5);
+                separationData3 = ofMap(dataz3, 0.45, 0.51, 2,  10);
             }
 
         }
