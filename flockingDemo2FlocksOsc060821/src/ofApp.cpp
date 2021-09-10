@@ -120,14 +120,14 @@ void ofApp::draw(){
     for (int i = 0; i < flock1.size(); i++) {
         flock1[i].update();
         flock1[i].draw(color1, flock);
-        flock1[i].flock(flock, flock1);
+        flock1[i].flock(flock1, flock);
         flock1[i].edges();
         flock[i].repulsion(flock1, flock);
     }
     for (int i = 0; i < flock1.size(); i++) {
         flock2[i].update();
         flock2[i].draw(color2, flock1);
-        flock2[i].flock(flock1, flock);
+        flock2[i].flock(flock2, flock3);
         flock2[i].edges();
         flock[i].repulsion(flock2, flock3);
 
@@ -135,7 +135,7 @@ void ofApp::draw(){
     for (int i = 0; i < flock1.size(); i++) {
         flock3[i].update();
         flock3[i].draw(color3, flock1);
-        flock3[i].flock(flock1, flock);
+        flock3[i].flock(flock3, flock2);
         flock3[i].edges();
         flock[i].repulsion(flock3, flock2);
 
