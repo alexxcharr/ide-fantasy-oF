@@ -2,7 +2,7 @@
 
 FlockingDemo2FlockOsc060821
 
-oscmessages listening:
+osc messages listening:
 
 - "/sappooro"
     sensor numbers: 1, 2
