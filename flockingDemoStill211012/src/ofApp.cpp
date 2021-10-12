@@ -51,7 +51,7 @@ void ofApp::update(){
         } if (arrayD.size() > 2) {
             arrayD.erase(arrayD.begin());
         }
-        if (message.getAddress() == "/sapporo") {
+        if (message.getAddress() == "/athens") {
             if (message.getArgAsFloat(0) == 1) {
                 datax = message.getArgAsFloat(1);
                 datay = message.getArgAsFloat(2);
@@ -78,7 +78,7 @@ void ofApp::update(){
         }
 
         if (message.getAddress() == "/corfu") {
-            if (message.getArgAsFloat(0) == 1) {
+            if (message.getArgAsFloat(0) == 3) {
                 datax2 = message.getArgAsFloat(1);
                 datay2 = message.getArgAsFloat(2);
                 dataz2 = message.getArgAsFloat(3);
@@ -89,7 +89,7 @@ void ofApp::update(){
                 separationData2 = ofMap(dataz2, 0.45, 0.51, 2, 8);
                 arrayC.push_back(datax2);
                 //  cout<<datay<<endl;
-            }else if (message.getArgAsFloat(0) == 2) {
+            }else if (message.getArgAsFloat(0) == 4) {
                 datax3 = message.getArgAsFloat(1);
                 datay3 = message.getArgAsFloat(2);
                 dataz3 = message.getArgAsFloat(3);
