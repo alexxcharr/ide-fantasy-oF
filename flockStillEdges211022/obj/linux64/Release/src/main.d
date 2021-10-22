@@ -1,5 +1,5 @@
 obj/linux64/Release/src/main.o: \
- /home/alex/of/apps/myApps/flockingDemo2FlocksOsc060821/src/main.cpp \
+ /home/alex/of/apps/myApps/flockStillEdges211022/src/main.cpp \
  /home/alex/of/libs/openFrameworks/ofMain.h \
  /home/alex/of/libs/openFrameworks/utils/ofConstants.h \
  /home/alex/of/libs/tess2/include/tesselator.h \
@@ -558,7 +558,7 @@ obj/linux64/Release/src/main.o: \
  /home/alex/of/libs/openFrameworks/3d/of3dUtils.h \
  /home/alex/of/libs/openFrameworks/3d/ofCamera.h \
  /home/alex/of/libs/openFrameworks/3d/ofEasyCam.h \
- /home/alex/of/apps/myApps/flockingDemo2FlocksOsc060821/src/ofApp.h \
+ /home/alex/of/apps/myApps/flockStillEdges211022/src/ofApp.h \
  /home/alex/of/addons/ofxGui/src/ofxGui.h \
  /home/alex/of/addons/ofxGui/src/ofxToggle.h \
  /home/alex/of/addons/ofxGui/src/ofxBaseGui.h \
@@ -587,7 +587,7 @@ obj/linux64/Release/src/main.o: \
  /home/alex/of/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h \
  /home/alex/of/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h \
  /home/alex/of/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h \
- /home/alex/of/apps/myApps/flockingDemo2FlocksOsc060821/src/boid.h
+ /home/alex/of/apps/myApps/flockStillEdges211022/src/boid.h
 
 /home/alex/of/libs/openFrameworks/ofMain.h:
 
@@ -1739,7 +1739,7 @@ obj/linux64/Release/src/main.o: \
 
 /home/alex/of/libs/openFrameworks/3d/ofEasyCam.h:
 
-/home/alex/of/apps/myApps/flockingDemo2FlocksOsc060821/src/ofApp.h:
+/home/alex/of/apps/myApps/flockStillEdges211022/src/ofApp.h:
 
 /home/alex/of/addons/ofxGui/src/ofxGui.h:
 
@@ -1797,4 +1797,4 @@ obj/linux64/Release/src/main.o: \
 
 /home/alex/of/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h:
 
-/home/alex/of/apps/myApps/flockingDemo2FlocksOsc060821/src/boid.h:
+/home/alex/of/apps/myApps/flockStillEdges211022/src/boid.h:

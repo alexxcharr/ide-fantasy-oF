@@ -1,6 +1,6 @@
 obj/linux64/Release/src/ofApp.o: \
- /home/alex/of/apps/myApps/flockingDemo2FlocksOsc060821/src/ofApp.cpp \
- /home/alex/of/apps/myApps/flockingDemo2FlocksOsc060821/src/ofApp.h \
+ /home/alex/of/apps/myApps/flockStillEdges211022/src/ofApp.cpp \
+ /home/alex/of/apps/myApps/flockStillEdges211022/src/ofApp.h \
  /home/alex/of/libs/openFrameworks/ofMain.h \
  /home/alex/of/libs/openFrameworks/utils/ofConstants.h \
  /home/alex/of/libs/tess2/include/tesselator.h \
@@ -587,9 +587,9 @@ obj/linux64/Release/src/ofApp.o: \
  /home/alex/of/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h \
  /home/alex/of/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h \
  /home/alex/of/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h \
- /home/alex/of/apps/myApps/flockingDemo2FlocksOsc060821/src/boid.h
+ /home/alex/of/apps/myApps/flockStillEdges211022/src/boid.h
 
-/home/alex/of/apps/myApps/flockingDemo2FlocksOsc060821/src/ofApp.h:
+/home/alex/of/apps/myApps/flockStillEdges211022/src/ofApp.h:
 
 /home/alex/of/libs/openFrameworks/ofMain.h:
 
@@ -1797,4 +1797,4 @@ obj/linux64/Release/src/ofApp.o: \
 
 /home/alex/of/addons/ofxOsc/libs/oscpack/src/osc/../ip/PacketListener.h:
 
-/home/alex/of/apps/myApps/flockingDemo2FlocksOsc060821/src/boid.h:
+/home/alex/of/apps/myApps/flockStillEdges211022/src/boid.h:
