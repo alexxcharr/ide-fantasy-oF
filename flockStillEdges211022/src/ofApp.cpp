@@ -167,21 +167,21 @@ void ofApp::update(){
     void ofApp::draw(){
         // cam.begin();
         // ofTranslate(ofGetWidth()/2, ofGetHeight()/2, 0);
-        for (int i = 0; i < flock.size(); i++) {
-            flock[i].update();
-            flock[i].draw(graphicsBoo, color, flock);
-            flock[i].flock(flock);
-            flock[i].edges();
-            // flock[i].repulsion(flock, flock1);
+        // for (int i = 0; i < flock.size(); i++) {
+        //     flock[i].update();
+        //     flock[i].draw(graphicsBoo, color, flock);
+        //     flock[i].flock(flock);
+        //     flock[i].edges();
+        //     // flock[i].repulsion(flock, flock1);
 
-        }
-        for (int i = 0; i < flock1.size(); i++) {
-            flock1[i].update();
-            flock1[i].draw(graphicsBoo, color1, flock1);
-            flock1[i].flock(flock1);
-            flock1[i].edges();
-            // flock[i].repulsion(flock1, flock);
-        }
+        // }
+        // for (int i = 0; i < flock1.size(); i++) {
+        //     flock1[i].update();
+        //     flock1[i].draw(graphicsBoo, color1, flock1);
+        //     flock1[i].flock(flock1);
+        //     flock1[i].edges();
+        //     // flock[i].repulsion(flock1, flock);
+        // }
         for (int i = 0; i < flock2.size(); i++) {
             flock2[i].update();
             flock2[i].draw(graphicsBoo, color2, flock2);
