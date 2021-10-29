@@ -16,6 +16,7 @@ public:
 
     void keyPressed(int key);
     void keyReleased(int key);
+
     void mouseMoved(int x, int y );
     void mouseDragged(int x, int y, int button);
     void mousePressed(int x, int y, int button);
@@ -29,6 +30,8 @@ public:
     ofEasyCam cam;
 
     ofxOscReceiver osc;
+    int freezeA, freezeB, freezeC, freezeD;
+    float velDataAX, velDataAY, velDataBX, velDataBY, velDataCX, velDataCY, velDataDX, velDataDY;
     float datax, alignData, datay, cohesionData, dataz, separationData;
     float datax1, alignData1, datay1, cohesionData1, dataz1, separationData1;
     float datax2, alignData2, datay2, cohesionData2, dataz2, separationData2;
@@ -42,9 +45,13 @@ public:
     vector<boid> flock2;
     vector<boid> flock3;
 
+    vector<float> arrayA, arrayB, arrayC, arrayD;
+
     ofxFloatSlider alignSlider;
     ofxFloatSlider cohesionSlider;
     ofxFloatSlider separationSlider;
     ofxIntSlider radiusSlider;
+
+    int graphicsBoo;
 };
 // extern vector<boid> flock;
