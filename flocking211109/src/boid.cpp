@@ -179,12 +179,12 @@ void boid::edges() {
 
 ofVec2f boid::data(std::vector<boid> flock, float x, float y) {
     ofVec2f steering(0, 0);
-    ofVec2f dataVel(accData.x, accData.y);
+    ofVec2f dataVel(x, y);
     int total = 0;
     steering = dataVel;// - velocity;
     steering.normalize();
     steering *= 2;//maxSpeed;
     //cout<<x<<endl;
-    steering.limit(0.03 * 2);
+    steering.limit(0.03);
     return steering;
 }
